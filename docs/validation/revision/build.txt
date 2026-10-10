@@ -1,0 +1,44 @@
+
+> tithe-frontend@1.0.0 build
+> npm run typecheck && vite build && node scripts/export.mjs && node scripts/verify.mjs
+
+
+> tithe-frontend@1.0.0 typecheck
+> tsc --noEmit
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 445 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/index.html                                                 2.08 kB │ gzip:   0.80 kB
+../dist/assets/instrument-serif-latin-400-normal-DnYpCC2O.woff2   21.03 kB
+../dist/assets/instrument-serif-latin-400-italic-DKMiL14s.woff2   22.12 kB
+../dist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2           36.93 kB
+../dist/assets/index-nIgFpvJv.css                                 22.43 kB │ gzip:   5.12 kB
+../dist/assets/ccip-CbRIlNcb.js                                    2.83 kB │ gzip:   1.30 kB
+../dist/assets/index-DtjCpVy8.js                                 557.17 kB │ gzip: 169.73 kB
+
+✓ built in 847ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+Verified 2 pinned ABIs; exported 12 assets to dist.
+{
+  "result": "PASS",
+  "assets": 12,
+  "exportBytes": 791144,
+  "contracts": [
+    {
+      "name": "TitheToken",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee"
+    },
+    {
+      "name": "TitheHook",
+      "abiHash": "48ae8b56141f97a67a9d18d84ead0177afac563c0818231c8620d2006b476753"
+    }
+  ],
+  "configuration": "Exact handoff / network match; no extra top-level keys"
+}

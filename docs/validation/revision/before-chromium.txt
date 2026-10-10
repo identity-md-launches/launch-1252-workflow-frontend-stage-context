@@ -1,0 +1,6 @@
+OBSERVED First phone screen exposes balance, full Claim ETH, and header connection
+OBSERVED Full uint256 seat ID wraps without clipping at 390px and 320px
+OBSERVED Repeated selected-seat lookup preserves balances while explicitly refreshing
+OBSERVED Swap connection missing-wallet feedback stays beside its button
+OBSERVED Swap connection rejection feedback stays beside its button
+OBSERVED Task headings, restrained rendered type scale, and static share metadata

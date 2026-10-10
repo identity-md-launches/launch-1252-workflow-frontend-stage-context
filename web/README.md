@@ -6,7 +6,7 @@ The frontend does not deploy contracts, publish the site, add demo liquidity, or
 
 ## Install, build, and preview
 
-Use Node 22.12 or later (validated with Node 22.23.2) and npm. From the repository root:
+Use Node 22.12 or later (original validation on Node 22.23.2; revision validation on Node 24.21.0) and npm. From the repository root:
 
 ```sh
 npm ci --prefix web
@@ -53,11 +53,20 @@ npm --prefix web run verify
 npm --prefix web run check:budget
 PLAYWRIGHT_BROWSERS_PATH="$PWD/test/scratch/browsers" ./web/node_modules/.bin/playwright install chromium
 npm --prefix web run test:browser
+npm --prefix web run test:revision
 npm --prefix web run check:rpc
 npm --prefix web run test:live
 ```
 
 The browser scripts start and close their own foreground preview, serving the **production export under `/preview/`**. They use the scratch Chromium installation. The mocked suite intercepts public RPC and wallet operations; it cannot broadcast to mainnet. The live suite is disconnected, forbids signing/sending requests, and only reads the real configured public RPCs. Live RPC access can fail independently of the local app. Dependency installation and browser download need network access; the deterministic tests themselves require no funded wallet or external service.
+
+The revision suite checks the initial 390×844 claim placement, full uint256 IDs at 390/320px, repeated seat refresh, local wallet errors from both connection controls, rendered typography, and the share-card asset. `--baseline` records observations without asserting the repaired behavior; the saved baseline was collected from the prior committed export. Optional WebKit validation uses `npm --prefix web run test:revision -- --webkit` after installing that browser and its host libraries. This worker's WebKit launch failed because host libraries are absent; Chromium validation completed.
+
+Dependencies are deliberately installed through `npm ci`, not committed. The current assignment explicitly forbids `node_modules`, package caches, registry mirrors and unnecessary npm archives. An isolated `npm ci --offline` with a new empty cache reproduced `ENOTCACHED` for `ws`; that confirms installation needs a registry/cache, not a defect in the self-contained static export. See the revision record in the validation document.
+
+## Share preview
+
+The committed `public/share-card.png` is a 1200×630 rendering of `share-card.html`, using the existing fonts, wordmark and seat illustration. Regenerate it with `npm --prefix web run share-card` after installing scratch Chromium, then run the production build. The normal build uses the committed PNG and needs no browser. The static head supplies Open Graph/Twitter image metadata, dimensions and alt text. Because no public origin is assigned, image URLs are relative. Before publication, the publisher must replace both `og:image` and `twitter:image` in `web/index.html` with the absolute URL for `share-card.png` under the assigned hosting path and rebuild to regenerate all asset hashes. No domain is invented here.
 
 See [frontend validation](../docs/FRONTEND-VALIDATION.md), [design documentation](../docs/DESIGN.md), and the machine-readable evidence and screenshots in [docs/validation](../docs/validation). `npm run licenses` regenerates the bundled production dependency notices after a dependency update. `web/.gitignore` is the only ignore file changed; its explicit assignment budget excludes dependencies and caches at every nesting depth. Do not commit generated dependencies, browser binaries, test scratch directories, or npm archives.
 

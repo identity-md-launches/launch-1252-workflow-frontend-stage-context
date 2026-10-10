@@ -11,6 +11,8 @@
     "verify": "node scripts/verify.mjs",
     "test": "node --import tsx --test tests/*.test.ts",
     "test:browser": "node --import tsx tests/browser.mjs",
+    "test:revision": "node --import tsx tests/revision.mjs",
+    "share-card": "node scripts/share-card.mjs",
     "check:rpc": "node --import tsx scripts/check-rpc.ts",
     "test:live": "node tests/browser-live.mjs",
     "licenses": "node scripts/licenses.mjs",

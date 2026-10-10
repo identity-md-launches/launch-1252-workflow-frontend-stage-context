@@ -60,10 +60,29 @@ try {
     })),
   );
   for (const width of [1440, 390]) {
-    await page.setViewportSize({ width, height: 1000 });
+    await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
+    await page.evaluate(() => scrollTo(0, 0));
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
     report.viewports.push({ width, overflow });
     if (overflow) throw Error(`Overflow at ${width}`);
+    if (width === 390) {
+      report.firstScreen = await page.evaluate(() => {
+        const box = (selector) => {
+          const r = document.querySelector(selector).getBoundingClientRect();
+          return { top: r.top, bottom: r.bottom };
+        };
+        return {
+          balance: box('.balance-number'),
+          claim: box('.claim-button'),
+          wallet: box('header .connect-button'),
+        };
+      });
+      if (report.firstScreen.claim.bottom > 844 || report.firstScreen.balance.bottom > 844)
+        throw Error('The live ETH balance or claim falls below the initial phone viewport.');
+      await page.screenshot({
+        path: resolve(root, 'docs/validation/revision/live-first-screen.png'),
+      });
+    }
     await page.screenshot({
       path: resolve(root, `docs/validation/live-${width}.png`),
       fullPage: true,

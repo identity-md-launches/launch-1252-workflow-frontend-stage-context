@@ -1,0 +1,176 @@
+{
+  "time": "2026-10-10T16:56:01.962Z",
+  "engine": "chromium",
+  "baseline": false,
+  "scope": "Committed production export under /preview/; deterministic RPC/wallet fixtures; no broadcast",
+  "checks": [
+    {
+      "name": "First phone screen exposes balance, full Claim ETH, and header connection",
+      "result": "PASS",
+      "measurements": {
+        "ledger": {
+          "top": 382,
+          "bottom": 417.1875,
+          "width": 111.078125,
+          "height": 35.1875
+        },
+        "balance": {
+          "top": 669.671875,
+          "bottom": 708.0625,
+          "width": 312,
+          "height": 38.390625
+        },
+        "claim": {
+          "top": 750.65625,
+          "bottom": 794.65625,
+          "width": 312,
+          "height": 44
+        },
+        "wallet": {
+          "top": 20,
+          "bottom": 64,
+          "width": 107.921875,
+          "height": 44
+        },
+        "headlineSize": "40px"
+      }
+    },
+    {
+      "name": "Full uint256 seat ID wraps without clipping at 390px and 320px",
+      "result": "PASS",
+      "widths": [
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "value": "Seat #115792089237316195423570985008687907853269984665640564039457584007913129639935",
+          "wrap": "anywhere"
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "value": "Seat #115792089237316195423570985008687907853269984665640564039457584007913129639935",
+          "wrap": "anywhere"
+        }
+      ]
+    },
+    {
+      "name": "Repeated selected-seat lookup preserves balances while explicitly refreshing",
+      "result": "PASS",
+      "previous": [
+        "0.0125ETH",
+        "4,275TDEMO"
+      ],
+      "during": [
+        "0.0125ETH",
+        "4,275TDEMO"
+      ],
+      "duringStatus": "Reading contracts…",
+      "refreshRequests": 28
+    },
+    {
+      "name": "Swap connection missing-wallet feedback stays beside its button",
+      "result": "PASS",
+      "measurements": {
+        "error": {
+          "top": 397.734375,
+          "bottom": 434.921875,
+          "width": 312,
+          "height": 37.1875
+        },
+        "button": {
+          "top": 442.921875,
+          "bottom": 490.921875,
+          "width": 312,
+          "height": 48
+        },
+        "local": 1,
+        "describedBy": "swap-wallet-feedback"
+      }
+    },
+    {
+      "name": "Swap connection rejection feedback stays beside its button",
+      "result": "PASS",
+      "measurements": {
+        "error": {
+          "top": 397.734375,
+          "bottom": 416.328125,
+          "width": 312,
+          "height": 18.59375
+        },
+        "button": {
+          "top": 424.328125,
+          "bottom": 472.328125,
+          "width": 312,
+          "height": 48
+        },
+        "local": 1,
+        "describedBy": "swap-wallet-feedback"
+      }
+    },
+    {
+      "name": "Task headings, restrained rendered type scale, and static share metadata",
+      "result": "PASS",
+      "widths": [
+        {
+          "width": 390,
+          "sizes": [
+            "16px",
+            "18px",
+            "32px",
+            "12px",
+            "40px",
+            "15px",
+            "13px"
+          ],
+          "weights": [
+            "400",
+            "550",
+            "650"
+          ],
+          "kickers": 0,
+          "labels": [
+            {
+              "casing": "none",
+              "tracking": "normal"
+            },
+            {
+              "casing": "none",
+              "tracking": "normal"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "sizes": [
+            "16px",
+            "18px",
+            "32px",
+            "13px",
+            "12px",
+            "84.96px",
+            "15px"
+          ],
+          "weights": [
+            "400",
+            "550",
+            "650"
+          ],
+          "kickers": 0,
+          "labels": [
+            {
+              "casing": "none",
+              "tracking": "normal"
+            },
+            {
+              "casing": "none",
+              "tracking": "normal"
+            }
+          ]
+        }
+      ],
+      "share": "./share-card.png"
+    }
+  ],
+  "consoleErrors": [],
+  "failedStaticResources": []
+}

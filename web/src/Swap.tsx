@@ -249,8 +249,13 @@ export function Swap({
   let action;
   if (!wallet.account)
     action = (
-      <button className="primary wide" onClick={wallet.connect} disabled={wallet.busy}>
-        Connect wallet <Icon name="wallet" />
+      <button
+        className="primary wide"
+        onClick={() => wallet.connect('swap')}
+        disabled={wallet.busy}
+        aria-describedby="swap-wallet-feedback"
+      >
+        {wallet.busy ? 'Connecting…' : 'Connect wallet'} <Icon name="wallet" />
       </button>
     );
   else if (!wallet.correct)
@@ -303,8 +308,7 @@ export function Swap({
     <section className="swap-card" aria-labelledby="swap-title" id="swap">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">The demo pool</p>
-          <h2 id="swap-title">Swap with purpose.</h2>
+          <h2 id="swap-title">Swap ETH and TDEMO</h2>
         </div>
         <span className="small-tag">Uniswap v4</span>
       </div>
@@ -451,6 +455,9 @@ export function Swap({
           . Then approve the router for 30 minutes. Each step is a separate transaction.
         </p>
       )}
+      <p id="swap-wallet-feedback" className="error-text" role="status">
+        {wallet.errorSource === 'swap' ? wallet.error : ''}
+      </p>
       {action}
       <TxFeedback id="approve-token" tx={tx} d={d} />
       <TxFeedback id="approve-router" tx={tx} d={d} />

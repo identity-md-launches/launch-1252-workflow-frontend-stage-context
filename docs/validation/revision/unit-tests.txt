@@ -1,0 +1,27 @@
+
+> tithe-frontend@1.0.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ pinned implementation-derived ABI canonical hashes match handoff (33.106801ms)
+✔ legacy key preserves native ordering, exact hook, fee and spacing (6.012047ms)
+✔ explicit handoff poolKey wins over legacy fallback without mutation (0.329362ms)
+✔ amount parsing rejects rounding, exponent, negative, zero and overflow (3.800468ms)
+✔ seat supports zero and full uint256 without Number precision loss (0.781666ms)
+✔ slippage uses integer rounding down and stays bounded (0.506793ms)
+✔ router encoding roundtrip: standard, buy (7.657873ms)
+✔ router encoding roundtrip: standard, sell (5.640195ms)
+✔ router encoding roundtrip: extended, buy (4.599737ms)
+✔ router encoding roundtrip: extended, sell (0.861655ms)
+✔ swap cannot remove minimum received guard or spend foreign currency (1.45446ms)
+✔ untrusted ABI path cannot escape the export (0.574911ms)
+✔ wallet unknown-chain recovery offers exact network block then switches again (2.527197ms)
+✔ rejected switch never triggers add-chain (0.868628ms)
+✔ quoter bubbles a hook error outside its own ABI without leaking selectors (6.161947ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1798.159026

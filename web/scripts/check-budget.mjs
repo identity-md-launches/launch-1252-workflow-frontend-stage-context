@@ -12,6 +12,8 @@ const changed = git(['diff', '--name-only', handoff.sourceCommit, 'HEAD'])
   .split('\n')
   .filter(Boolean);
 for (const path of changed) {
+  // Explicit revision-response exception supplied by the assignment.
+  if (path === '.imd-responses.json') continue;
   if (!/^(web|dist|docs)\//.test(path)) throw Error(`Out-of-scope change: ${path}`);
   if (path.split('/').some((part) => part.startsWith('.')) && path !== 'web/.gitignore')
     throw Error(`Unbudgeted dotfile: ${path}`);

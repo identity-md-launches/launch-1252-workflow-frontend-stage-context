@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T16:27:53.979Z",
+  "checkedAt": "2026-10-10T16:56:17.810Z",
   "scope": "Real public RPC, disconnected browser, read-only; no wallet, no signing, no broadcast",
   "result": "PASS",
   "console": [],
@@ -9,19 +9,15 @@
       "status": 200
     },
     {
-      "url": "/preview/assets/index-DzKrnJEw.css",
+      "url": "/preview/assets/index-nIgFpvJv.css",
       "status": 200
     },
     {
-      "url": "/preview/assets/index-wHA5xlcm.js",
+      "url": "/preview/assets/index-DtjCpVy8.js",
       "status": 200
     },
     {
       "url": "/preview/imd-deployment.json",
-      "status": 200
-    },
-    {
-      "url": "/preview/favicon.svg",
       "status": 200
     },
     {
@@ -30,6 +26,10 @@
     },
     {
       "url": "/preview/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+      "status": 200
+    },
+    {
+      "url": "/preview/favicon.svg",
       "status": 200
     },
     {
@@ -175,13 +175,13 @@
       "overflow": false
     }
   ],
-  "blockText": "Live state · block 26,163,225",
+  "blockText": "Live state · block 26,163,366",
   "balances": [
     "0.001237ETH",
-    "114,732.393978TDEMO"
+    "114,911.967491TDEMO"
   ],
   "owner": "Seat owner 0xBe11D80C27863C950485D269992DC086e9F397A9 on explorer",
-  "events": "Tithe accruedBlock 26,163,067114,732.393978 TDEMO Tithe accruedBlock 26,163,0620.001237 ETH Pool bound to seatBlock 26,163,059View ",
+  "events": "Tithe accruedBlock 26,163,365179.573512 TDEMO Tithe accruedBlock 26,163,067114,732.393978 TDEMO Tithe accruedBlock 26,163,0620.001237 ETH Pool bound to seatBlock 26,163,059View ",
   "fonts": [
     {
       "family": "DM Sans Variable",
@@ -198,5 +198,19 @@
       "weight": "400",
       "status": "loaded"
     }
-  ]
+  ],
+  "firstScreen": {
+    "balance": {
+      "top": 669.671875,
+      "bottom": 708.0625
+    },
+    "claim": {
+      "top": 750.65625,
+      "bottom": 794.65625
+    },
+    "wallet": {
+      "top": 20,
+      "bottom": 64
+    }
+  }
 }

@@ -1,0 +1,196 @@
+{
+  "time": "2026-10-10T16:52:17.757Z",
+  "engine": "chromium",
+  "baseline": true,
+  "scope": "Committed production export under /preview/; deterministic RPC/wallet fixtures; no broadcast",
+  "checks": [
+    {
+      "name": "First phone screen exposes balance, full Claim ETH, and header connection",
+      "result": "OBSERVED",
+      "measurements": {
+        "ledger": {
+          "top": 698.796875,
+          "bottom": 733.984375,
+          "width": 150.25,
+          "height": 35.1875
+        },
+        "balance": {
+          "top": 986.46875,
+          "bottom": 1028.703125,
+          "width": 312,
+          "height": 42.234375
+        },
+        "claim": {
+          "top": 1071.296875,
+          "bottom": 1115.296875,
+          "width": 312,
+          "height": 44
+        },
+        "wallet": {
+          "top": 20,
+          "bottom": 64,
+          "width": 107.921875,
+          "height": 44
+        },
+        "headlineSize": "59.2px"
+      }
+    },
+    {
+      "name": "Full uint256 seat ID wraps without clipping at 390px and 320px",
+      "result": "OBSERVED",
+      "widths": [
+        {
+          "width": 390,
+          "scrollWidth": 865,
+          "value": "Seat #115792089237316195423570985008687907853269984665640564039457584007913129639935",
+          "wrap": "normal"
+        },
+        {
+          "width": 320,
+          "scrollWidth": 865,
+          "value": "Seat #115792089237316195423570985008687907853269984665640564039457584007913129639935",
+          "wrap": "normal"
+        }
+      ]
+    },
+    {
+      "name": "Repeated selected-seat lookup preserves balances while explicitly refreshing",
+      "result": "OBSERVED",
+      "previous": [
+        "0.0125ETH",
+        "4,275TDEMO"
+      ],
+      "during": [
+        "—ETH",
+        "—TDEMO"
+      ],
+      "duringStatus": "Live state · block undefined",
+      "refreshRequests": 0
+    },
+    {
+      "name": "Swap connection missing-wallet feedback stays beside its button",
+      "result": "OBSERVED",
+      "measurements": {
+        "error": {
+          "top": -1188.203125,
+          "bottom": -1151.015625,
+          "width": 350,
+          "height": 37.1875
+        },
+        "button": {
+          "top": 398.3125,
+          "bottom": 446.3125,
+          "width": 312,
+          "height": 48
+        },
+        "local": 0,
+        "describedBy": null
+      }
+    },
+    {
+      "name": "Swap connection rejection feedback stays beside its button",
+      "result": "OBSERVED",
+      "measurements": {
+        "error": {
+          "top": -1170.203125,
+          "bottom": -1151.609375,
+          "width": 350,
+          "height": 18.59375
+        },
+        "button": {
+          "top": 397.71875,
+          "bottom": 445.71875,
+          "width": 312,
+          "height": 48
+        },
+        "local": 0,
+        "describedBy": null
+      }
+    },
+    {
+      "name": "Task headings, restrained rendered type scale, and static share metadata",
+      "result": "OBSERVED",
+      "widths": [
+        {
+          "width": 390,
+          "sizes": [
+            "16px",
+            "24.8px",
+            "35.2px",
+            "12px",
+            "11.2px",
+            "59.2px",
+            "15px",
+            "13px",
+            "32px",
+            "18px",
+            "10.2px",
+            "18.4px",
+            "20px",
+            "28.8px",
+            "24px"
+          ],
+          "weights": [
+            "400",
+            "550",
+            "650",
+            "450",
+            "600",
+            "500"
+          ],
+          "kickers": 5,
+          "labels": [
+            {
+              "casing": "uppercase",
+              "tracking": "1.8px"
+            },
+            {
+              "casing": "uppercase",
+              "tracking": "1.8px"
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "sizes": [
+            "16px",
+            "28.8px",
+            "40px",
+            "13px",
+            "12px",
+            "84.96px",
+            "24px",
+            "32px",
+            "18px",
+            "10.2px",
+            "18.4px",
+            "20px",
+            "15px"
+          ],
+          "weights": [
+            "400",
+            "550",
+            "650",
+            "450",
+            "600",
+            "500"
+          ],
+          "kickers": 5,
+          "labels": [
+            {
+              "casing": "uppercase",
+              "tracking": "1.8px"
+            },
+            {
+              "casing": "uppercase",
+              "tracking": "1.8px"
+            }
+          ]
+        }
+      ],
+      "share": null
+    }
+  ],
+  "consoleErrors": [],
+  "failedStaticResources": []
+}

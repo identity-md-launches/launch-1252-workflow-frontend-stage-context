@@ -1,0 +1,4 @@
+fatal: Unable to create temporary file '/home/worker/.identitymd/work/1a3fa6a5-a05e-48b6-9a91-71abaceb0844/6a008d73-76af-4e6b-bfe7-f4ea8bf7f1eb/.git/objects/pack/tmp_pack_XXXXXX': Read-only file system
+fatal: index-pack failed
+fatal: could not fetch e8af902e5b247940c4b05967b8ddad95e689dcb3 from promisor remote
+error: pack-objects died

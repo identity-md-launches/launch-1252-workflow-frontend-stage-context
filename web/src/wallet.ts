@@ -60,6 +60,7 @@ export function useWallet(d: Deployment) {
   const [chainId, setChainId] = useState<number>();
   const [busy, setBusy] = useState(false),
     [error, setError] = useState('');
+  const [errorSource, setErrorSource] = useState<'header' | 'swap'>('header');
   useEffect(() => {
     const announce = (e: Event) => {
       const { info, provider } = (e as CustomEvent).detail;
@@ -101,32 +102,38 @@ export function useWallet(d: Deployment) {
       provider.removeListener?.('disconnect', disconnect);
     };
   }, [provider]);
-  const connect = useCallback(async () => {
-    if (busy) return;
-    setError('');
-    setBusy(true);
-    try {
-      const option = options.find((w) => w.id === selected) ?? options[0];
-      if (!option)
-        throw Error(
-          'No browser wallet found. Open this page in an Ethereum wallet’s browser or install a browser wallet, then reload.',
-        );
-      const accounts = await option.provider.request({ method: 'eth_requestAccounts' });
-      if (!accounts[0]) throw Error('Your wallet did not share an account. Try connecting again.');
-      const id = await option.provider.request({ method: 'eth_chainId' });
-      setProvider(option.provider);
-      setAccount(getAddress(accounts[0]));
-      setChainId(Number(id));
-    } catch (e) {
-      setError(errorText(e));
-    } finally {
-      setBusy(false);
-    }
-  }, [options, selected, busy]);
+  const connect = useCallback(
+    async (source: 'header' | 'swap' = 'header') => {
+      if (busy) return;
+      setError('');
+      setErrorSource(source);
+      setBusy(true);
+      try {
+        const option = options.find((w) => w.id === selected) ?? options[0];
+        if (!option)
+          throw Error(
+            'No browser wallet found. Open this page in an Ethereum wallet’s browser or install a browser wallet, then reload.',
+          );
+        const accounts = await option.provider.request({ method: 'eth_requestAccounts' });
+        if (!accounts[0])
+          throw Error('Your wallet did not share an account. Try connecting again.');
+        const id = await option.provider.request({ method: 'eth_chainId' });
+        setProvider(option.provider);
+        setAccount(getAddress(accounts[0]));
+        setChainId(Number(id));
+      } catch (e) {
+        setError(errorText(e));
+      } finally {
+        setBusy(false);
+      }
+    },
+    [options, selected, busy],
+  );
   const switchChain = async () => {
     if (!provider || busy) return;
     setBusy(true);
     setError('');
+    setErrorSource('header');
     try {
       await switchNetwork(provider, d);
       setChainId(Number(await provider.request({ method: 'eth_chainId' })));
@@ -145,6 +152,7 @@ export function useWallet(d: Deployment) {
     chainId,
     busy,
     error,
+    errorSource,
     connect,
     switchChain,
     disconnect: () => {

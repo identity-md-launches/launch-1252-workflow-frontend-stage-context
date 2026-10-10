@@ -1,0 +1,15 @@
+
+> tithe-frontend@1.0.0 check:budget
+> node scripts/check-budget.mjs
+
+file:///home/worker/.identitymd/work/1a3fa6a5-a05e-48b6-9a91-71abaceb0844/6a008d73-76af-4e6b-bfe7-f4ea8bf7f1eb/web/scripts/check-budget.mjs:8
+  throw Error('Commit the final scoped deliverable before measuring its Git bundle.');
+        ^
+
+Error: Commit the final scoped deliverable before measuring its Git bundle.
+    at file:///home/worker/.identitymd/work/1a3fa6a5-a05e-48b6-9a91-71abaceb0844/6a008d73-76af-4e6b-bfe7-f4ea8bf7f1eb/web/scripts/check-budget.mjs:8:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0

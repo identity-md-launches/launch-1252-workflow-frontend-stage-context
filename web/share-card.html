@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tithe share card source</title>
+    <style>
+      @font-face {
+        font-family: 'DM Sans';
+        src: url('./node_modules/@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2');
+      }
+      @font-face {
+        font-family: 'Instrument Serif';
+        src: url('./node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2');
+      }
+      @font-face {
+        font-family: 'Instrument Serif';
+        font-style: italic;
+        src: url('./node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2');
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        padding: 56px 64px;
+        background: #faf9f5;
+        color: #242f26;
+        font:
+          24px/1.5 'DM Sans',
+          sans-serif;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .stamp {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #245b40;
+        color: #fffefa;
+        font: 36px 'Instrument Serif';
+      }
+      .wordmark {
+        font: 52px/1 'Instrument Serif';
+        letter-spacing: -2px;
+      }
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 52px;
+      }
+      h1 {
+        margin: 0;
+        font: 80px/1.08 'Instrument Serif';
+        letter-spacing: -1.6px;
+      }
+      em {
+        color: #245b40;
+      }
+      p {
+        margin: 24px 0 0;
+        color: #62695e;
+      }
+      svg {
+        width: 330px;
+        height: 330px;
+        flex: none;
+      }
+      footer {
+        margin-top: 38px;
+        padding-top: 20px;
+        border-top: 1px solid #e6e5dc;
+        font-size: 18px;
+        color: #62695e;
+      }
+    </style>
+  </head>
+  <body>
+    <header><span class="stamp">t</span><span class="wordmark">tithe.</span></header>
+    <main>
+      <div>
+        <h1>Pay the seat,<br /><em>not the wallet.</em></h1>
+        <p>View accrued ETH and TDEMO.<br />Claim for the current seat owner.</p>
+      </div>
+      <svg viewBox="0 0 330 330" fill="none" aria-label="An enduring identity.md seat">
+        <circle cx="165" cy="165" r="159" stroke="#e6e5dc" />
+        <circle cx="165" cy="165" r="124" stroke="#e6e5dc" stroke-dasharray="4 6" />
+        <circle cx="165" cy="165" r="103" fill="#eaf0e6" />
+        <g
+          transform="translate(65 65)"
+          stroke="#245b40"
+          stroke-width="2.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M62 98V51c0-24 76-24 76 0v47" />
+          <path
+            d="M77 46v44m23-48v48m23-44v44M52 106l21-17h59l18 17v15H52zM65 121l-9 40m79-40 9 40M68 144h66"
+          />
+          <path d="M54 108h93M75 126h49" opacity=".5" />
+        </g>
+      </svg>
+    </main>
+    <footer>A small share of every swap, bound to an identity.md seat.</footer>
+  </body>
+</html>

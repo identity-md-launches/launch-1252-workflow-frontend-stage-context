@@ -1,0 +1,123 @@
+
+> tithe-frontend@1.0.0 check:rpc
+> node --import tsx scripts/check-rpc.ts
+
+{
+  "checkedAt": "2026-10-10T16:54:32.384Z",
+  "scope": "Read-only public RPC checks; no signing or broadcasting",
+  "results": [
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "chainId": 1,
+      "contracts": [
+        {
+          "name": "TitheToken",
+          "address": "0x31ca73d03093357df8ddaaa73dbe1970f4eead6c",
+          "codeBytes": 1503
+        },
+        {
+          "name": "TitheHook",
+          "address": "0x815de6ecfc1e0b24b7ae8a5dcc05ba8f5d8f20cc",
+          "codeBytes": 7005
+        }
+      ],
+      "snapshot": {
+        "block": "26163357",
+        "timestamp": 1791651263,
+        "seat": "1",
+        "poolSeat": "1",
+        "bps": 25,
+        "initialized": true,
+        "liquidity": "80064092962998534530849",
+        "sqrtPrice": "790967599490611698171848375654468",
+        "lpFee": 12500,
+        "seatContract": "0x0000eC93127BAA929E58E97dd0095A2BFb38ec1D",
+        "owner": "0xBe11D80C27863C950485D269992DC086e9F397A9",
+        "assets": [
+          {
+            "address": "0x0000000000000000000000000000000000000000",
+            "symbol": "ETH",
+            "decimals": 18,
+            "accrued": "1237623762376237",
+            "liquid": "1237623762376237",
+            "pending": "0",
+            "total": "1237623762376237",
+            "totalPending": "0"
+          },
+          {
+            "address": "0x31ca73d03093357df8ddaaa73dbe1970f4eead6c",
+            "symbol": "TDEMO",
+            "decimals": 18,
+            "accrued": "114732393978741997957495",
+            "liquid": "114732393978741997957495",
+            "pending": "0",
+            "total": "114732393978741997957495",
+            "totalPending": "0"
+          }
+        ]
+      },
+      "readOnlyQuote": {
+        "inputWei": "1000000000000000",
+        "amountOut": "98164597288533229417279",
+        "gasEstimate": "84275"
+      }
+    },
+    {
+      "url": "https://eth.drpc.org",
+      "chainId": 1,
+      "contracts": [
+        {
+          "name": "TitheToken",
+          "address": "0x31ca73d03093357df8ddaaa73dbe1970f4eead6c",
+          "codeBytes": 1503
+        },
+        {
+          "name": "TitheHook",
+          "address": "0x815de6ecfc1e0b24b7ae8a5dcc05ba8f5d8f20cc",
+          "codeBytes": 7005
+        }
+      ],
+      "snapshot": {
+        "block": "26163357",
+        "timestamp": 1791651263,
+        "seat": "1",
+        "poolSeat": "1",
+        "bps": 25,
+        "initialized": true,
+        "liquidity": "80064092962998534530849",
+        "sqrtPrice": "790967599490611698171848375654468",
+        "lpFee": 12500,
+        "seatContract": "0x0000eC93127BAA929E58E97dd0095A2BFb38ec1D",
+        "owner": "0xBe11D80C27863C950485D269992DC086e9F397A9",
+        "assets": [
+          {
+            "address": "0x0000000000000000000000000000000000000000",
+            "symbol": "ETH",
+            "decimals": 18,
+            "accrued": "1237623762376237",
+            "liquid": "1237623762376237",
+            "pending": "0",
+            "total": "1237623762376237",
+            "totalPending": "0"
+          },
+          {
+            "address": "0x31ca73d03093357df8ddaaa73dbe1970f4eead6c",
+            "symbol": "TDEMO",
+            "decimals": 18,
+            "accrued": "114732393978741997957495",
+            "liquid": "114732393978741997957495",
+            "pending": "0",
+            "total": "114732393978741997957495",
+            "totalPending": "0"
+          }
+        ]
+      },
+      "readOnlyQuote": {
+        "inputWei": "1000000000000000",
+        "amountOut": "98164597288533229417279",
+        "gasEstimate": "84275"
+      }
+    }
+  ]
+}
+

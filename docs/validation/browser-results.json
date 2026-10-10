@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-10T16:23:39.878Z",
+  "time": "2026-10-10T16:54:21.722Z",
   "scope": "Production export at a gateway-style subpath; deterministic mocked public RPC and EIP-1193 wallet; no broadcast",
   "checks": [
     {

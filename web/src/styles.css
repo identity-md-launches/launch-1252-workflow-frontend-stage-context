@@ -186,7 +186,7 @@ h2 {
 }
 h3 {
   font-size: var(--text-body);
-  font-weight: 600;
+  font-weight: 650;
   line-height: 1.4;
 }
 p {
@@ -194,6 +194,10 @@ p {
 }
 em {
   font-weight: 400;
+}
+strong,
+b {
+  font-weight: 650;
 }
 svg {
   vertical-align: middle;
@@ -239,7 +243,7 @@ svg {
   align-items: center;
   gap: 10px;
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: var(--text-section);
   line-height: 1;
   letter-spacing: -0.045em;
   text-decoration: none;
@@ -247,7 +251,7 @@ svg {
 .brand-mark {
   display: inline-grid;
   place-items: center;
-  font-size: 1.8rem;
+  font-size: var(--text-lg);
   width: 34px;
   height: 34px;
   color: var(--color-surface);
@@ -314,33 +318,12 @@ svg {
   gap: 36px;
   padding-block: 66px 55px;
 }
-.eyebrow {
-  font-family: var(--font-body);
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-weight: 650;
-  letter-spacing: 0.13em;
-  line-height: 1.5;
-  color: var(--color-muted);
-  margin-bottom: 12px;
-}
-.hero .eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 22px;
-}
-.short-line {
-  width: 22px;
-  height: 1px;
-  background: var(--color-muted);
-}
 .hero h1 em {
   color: var(--color-accent);
 }
 .hero-description {
   color: var(--color-muted);
-  font-size: 1rem;
+  font-size: var(--text-body);
   margin-top: 24px;
   max-width: 55ch;
   line-height: 1.7;
@@ -406,7 +389,7 @@ svg {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 1.5rem;
+  font-size: var(--text-lg);
 }
 .node-one {
   inset-inline-start: 28px;
@@ -421,9 +404,8 @@ svg {
 }
 .diagram-label {
   position: absolute;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
+  font-size: var(--text-xs);
+  letter-spacing: normal;
   color: var(--color-muted);
   background: var(--color-page);
   padding: 4px 8px;
@@ -508,9 +490,6 @@ svg {
   align-items: center;
   gap: 16px;
 }
-.section-heading .eyebrow {
-  margin-bottom: 8px;
-}
 .outline-tag {
   border: 1px solid var(--color-border);
   color: var(--color-muted);
@@ -531,8 +510,12 @@ svg {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
 }
 .seat-badge strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-size: var(--text-lg);
   font-weight: 550;
 }
@@ -595,7 +578,7 @@ svg {
 .mono,
 code {
   font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
-  font-size: 0.85em;
+  font-size: inherit;
   font-variant-numeric: tabular-nums;
 }
 .full-address {
@@ -651,14 +634,13 @@ code {
   background: var(--color-accent-soft);
   color: var(--color-accent);
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: var(--text-lg);
   flex-shrink: 0;
 }
 .coin.eth {
   font-family: var(--font-body);
   background: var(--color-inset);
   color: var(--color-text);
-  font-size: 1.15rem;
 }
 .balance-main {
   display: flex;
@@ -669,8 +651,8 @@ code {
   flex-wrap: wrap;
 }
 .balance-number {
-  font-size: 2rem;
-  font-weight: 450;
+  font-size: var(--text-section);
+  font-weight: 400;
   line-height: 1.2;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.04em;
@@ -733,7 +715,7 @@ code {
     0 10px 24px #24322603;
 }
 .swap-card h2 {
-  font-size: 1.8rem;
+  font-size: var(--text-section);
 }
 .small-tag {
   font-size: 0.75rem;
@@ -775,7 +757,7 @@ code {
   border: 0;
   padding: 0;
   width: 100%;
-  font-size: 1.8rem;
+  font-size: var(--text-section);
   min-height: 40px;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.03em;
@@ -787,7 +769,7 @@ code {
   border-radius: 24px;
 }
 .output-amount {
-  font-size: 1.8rem;
+  font-size: var(--text-section);
   line-height: 1.4;
   flex: 1;
   min-width: 0;
@@ -868,7 +850,7 @@ dl {
   background: var(--color-accent);
   color: var(--color-surface);
   border-color: var(--color-accent);
-  font-weight: 500;
+  font-weight: 400;
   min-height: 48px;
 }
 .wide {
@@ -990,7 +972,7 @@ dl {
   gap: 3px;
 }
 .activity-list li strong {
-  font-weight: 500;
+  font-weight: 400;
 }
 .activity-list li > div > span {
   color: var(--color-muted);
@@ -1028,7 +1010,7 @@ dl {
   scroll-margin-top: 20px;
 }
 .how-intro h2 {
-  font-size: 2rem;
+  font-size: var(--text-section);
 }
 .how-steps {
   list-style: none;
@@ -1042,7 +1024,7 @@ dl {
   display: block;
   font-family: var(--font-display);
   color: var(--color-muted);
-  font-size: 1.25rem;
+  font-size: var(--text-lg);
   margin-bottom: 12px;
 }
 .how-steps h3 {
@@ -1182,7 +1164,7 @@ footer {
   color: var(--color-muted);
 }
 footer .brand {
-  font-size: 2rem;
+  font-size: var(--text-section);
   color: var(--color-text);
 }
 footer > span {
@@ -1337,19 +1319,18 @@ footer > span {
   }
 }
 @media (max-width: 36rem) {
+  :root {
+    --text-display: 2.5rem;
+  }
   .site-wrap {
     padding-inline: 20px;
   }
   .site-header {
     gap: 8px;
   }
-  .brand {
-    font-size: 2.2rem;
-  }
   .brand-mark {
     width: 29px;
     height: 29px;
-    font-size: 1.55rem;
   }
   .header-wallet .connect-button {
     font-size: 0.75rem;
@@ -1370,30 +1351,19 @@ footer > span {
   .hero {
     grid-template-columns: minmax(0, 1fr);
     position: relative;
-    padding-block: 36px 32px;
-  }
-  .hero h1 {
-    font-size: clamp(3.7rem, 12vw, 4.6rem);
-  }
-  .hero .eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    gap: 7px;
+    padding-block: 16px;
   }
   .hero-description {
-    font-size: var(--text-body);
-    margin-top: 20px;
+    margin-top: 12px;
   }
   .hero-link {
-    margin-top: 10px;
+    display: none;
   }
   .seat-illustration {
     display: none;
   }
   .principles-strip {
-    gap: 10px;
-    flex-direction: column;
-    font-size: 0.75rem;
+    display: none;
   }
   .status-bar {
     font-size: 0.75rem;
@@ -1446,9 +1416,6 @@ footer > span {
     min-height: 44px;
     justify-content: space-between;
   }
-  .balance-number {
-    font-size: 2.2rem;
-  }
   .swap-card {
     padding: 22px 18px;
   }
@@ -1466,10 +1433,6 @@ footer > span {
   }
   .trade-box .token-name {
     font-size: 0.75rem;
-  }
-  .amount-row input,
-  .output-amount {
-    font-size: 1.5rem;
   }
   .how-section {
     padding-block: 28px;

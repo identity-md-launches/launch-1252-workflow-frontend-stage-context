@@ -1,7 +1,7 @@
 {
   "result": "PASS",
-  "assets": 11,
-  "exportBytes": 727246,
+  "assets": 12,
+  "exportBytes": 791144,
   "contracts": [
     {
       "name": "TitheToken",

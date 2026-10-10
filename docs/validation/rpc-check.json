@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T16:13:48.400Z",
+  "checkedAt": "2026-10-10T16:54:32.384Z",
   "scope": "Read-only public RPC checks; no signing or broadcasting",
   "results": [
     {
@@ -18,8 +18,8 @@
         }
       ],
       "snapshot": {
-        "block": "26163155",
-        "timestamp": 1791648827,
+        "block": "26163357",
+        "timestamp": 1791651263,
         "seat": "1",
         "poolSeat": "1",
         "bps": 25,
@@ -74,8 +74,8 @@
         }
       ],
       "snapshot": {
-        "block": "26163154",
-        "timestamp": 1791648815,
+        "block": "26163357",
+        "timestamp": 1791651263,
         "seat": "1",
         "poolSeat": "1",
         "bps": 25,

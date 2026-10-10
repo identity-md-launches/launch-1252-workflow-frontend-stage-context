@@ -1,0 +1,10 @@
+
+> tithe-frontend@1.0.0 test:revision
+> node --import tsx tests/revision.mjs
+
+PASS First phone screen exposes balance, full Claim ETH, and header connection
+PASS Full uint256 seat ID wraps without clipping at 390px and 320px
+PASS Repeated selected-seat lookup preserves balances while explicitly refreshing
+PASS Swap connection missing-wallet feedback stays beside its button
+PASS Swap connection rejection feedback stays beside its button
+PASS Task headings, restrained rendered type scale, and static share metadata

@@ -1,0 +1,8 @@
+npm error code ENOTCACHED
+npm error request to https://registry.npmjs.org/ws/-/ws-8.21.0.tgz failed: cache mode is 'only-if-cached' but no cached response is available.
+npm notice
+npm notice New major version of npm available! 11.19.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+npm error A complete log of this run can be found in: /home/worker/.identitymd/work/***/***/test/scratch/empty-npm-cache/_logs/2026-10-10T16_50_19_850Z-debug-0.log

@@ -114,11 +114,16 @@ export default function App({ d }: { d: Deployment }) {
   const canWrite = ready && !!wallet.account && wallet.correct;
   const selectedEvents = events.filter((e) => snapshot && e.seat === snapshot.seat);
   const chooseSeat = (value: bigint) => {
-    setSeat(value);
     setSeatInput(String(value));
+    setClaimReview(undefined);
+    if (value === (seat ?? snapshot?.seat)) {
+      void refresh();
+      return;
+    }
+    setSeat(value);
     setSnapshot(undefined);
     setVerified(false);
-    setClaimReview(undefined);
+    setLoading(true);
   };
   function submitSeat(e: React.FormEvent) {
     e.preventDefault();
@@ -182,7 +187,12 @@ export default function App({ d }: { d: Deployment }) {
                     </select>
                   </label>
                 )}
-                <button className="connect-button" onClick={wallet.connect} disabled={wallet.busy}>
+                <button
+                  className="connect-button"
+                  onClick={() => wallet.connect('header')}
+                  disabled={wallet.busy}
+                  aria-describedby="header-wallet-feedback"
+                >
                   {wallet.busy ? 'Connecting…' : 'Connect wallet'}
                   <Icon name="wallet" size={16} />
                 </button>
@@ -190,12 +200,14 @@ export default function App({ d }: { d: Deployment }) {
             )}
           </div>
         </header>
+        <div className="wallet-feedback" id="header-wallet-feedback" role="status">
+          {wallet.errorSource === 'header' && wallet.error && (
+            <p className="error-text">{wallet.error}</p>
+          )}
+        </div>
         <main id="main" tabIndex={-1}>
           <section className="hero" aria-labelledby="page-title">
             <div className="hero-copy">
-              <p className="eyebrow">
-                <span className="short-line" />A small share. A lasting connection.
-              </p>
               <h1 id="page-title">
                 Pay the seat,
                 <br />
@@ -239,9 +251,6 @@ export default function App({ d }: { d: Deployment }) {
               Anyone can trigger a claim
             </span>
           </div>
-          <div className="wallet-feedback" role="status">
-            {wallet.error && <p className="error-text">{wallet.error}</p>}
-          </div>
           {wallet.account && !wallet.correct && (
             <div className="network-notice" id="network-notice">
               <div>
@@ -260,9 +269,9 @@ export default function App({ d }: { d: Deployment }) {
                 ? 'Reading contracts…'
                 : error
                   ? 'Contract reads unavailable'
-                  : !fresh
+                  : !fresh || !verified || !snapshot
                     ? 'Data needs refreshing'
-                    : `Live state · block ${snapshot?.block.toLocaleString()}`}
+                    : `Live state · block ${snapshot.block.toLocaleString()}`}
             </span>
             <button className="text-button" onClick={() => refresh()} disabled={loading || tx.busy}>
               <Icon name="refresh" size={14} />
@@ -283,8 +292,7 @@ export default function App({ d }: { d: Deployment }) {
             <section className="ledger" aria-labelledby="ledger-title" id="seat">
               <div className="section-heading">
                 <div>
-                  <p className="eyebrow">The seat ledger</p>
-                  <h2 id="ledger-title">A seat. A share.</h2>
+                  <h2 id="ledger-title">Seat ledger</h2>
                 </div>
                 <span className="outline-tag">Permissionless claims</span>
               </div>
@@ -516,12 +524,7 @@ export default function App({ d }: { d: Deployment }) {
           </div>
           <section className="how-section" id="how-it-works" aria-labelledby="how-title">
             <div className="how-intro">
-              <p className="eyebrow">Built to follow ownership</p>
-              <h2 id="how-title">
-                A simple idea,
-                <br />
-                <em>set in the contract.</em>
-              </h2>
+              <h2 id="how-title">How tithe works</h2>
             </div>
             <ol className="how-steps">
               <li>
@@ -553,8 +556,7 @@ export default function App({ d }: { d: Deployment }) {
           <section id="contracts" className="contracts-section" aria-labelledby="contracts-title">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">Open by design</p>
-                <h2 id="contracts-title">Check the details.</h2>
+                <h2 id="contracts-title">Deployed contracts</h2>
               </div>
               <a
                 className="text-link"
@@ -567,7 +569,7 @@ export default function App({ d }: { d: Deployment }) {
             </div>
             <div className="contract-grid">
               <div>
-                <h3>Deployed contracts</h3>
+                <h3>Application contracts</h3>
                 <dl>
                   {d.contracts.map((c) => (
                     <Detail key={c.name} label={c.name}>
