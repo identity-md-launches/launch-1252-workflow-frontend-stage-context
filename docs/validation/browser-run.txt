@@ -1,0 +1,21 @@
+
+> tithe-frontend@1.0.0 test:browser
+> node --import tsx tests/browser.mjs
+
+PASS Desktop/mobile rendering, keyboard, fonts, contrast, reflow and accessibility
+PASS Missing wallet gives recoverable feedback
+PASS Unknown-chain switch adds exact vetted chain and retries
+PASS Claim resolves current owner, sends no approval, locks pending, refreshes balances
+PASS Claim wallet rejection and simulation revert release controls without broadcasting
+PASS Seat lookup, nonexistent seat, large ID validation and empty balances
+PASS Native buy quotes via vetted quoter, encodes bounded router transaction and refreshes
+PASS Token sell has exact token→Permit2 and Permit2→router approvals, no ETH value
+PASS Quote validation, failed quote, stale quote, and account-change invalidation
+PASS Missing code and RPC failure disable all writes and can recover
+PASS ABI tampering fails closed before wallet or RPC actions
+PASS Advanced redemption sends to hook and preserves beneficiary
+PASS Keyboard-only connection and claim, visible focus, cancellation and recovery
+PASS Rejected wallet connection can be retried
+PASS A reverted receipt restores controls without claiming success
+PASS Unknown confirmation stays locked until the receipt can be checked
+PASS Token transfer and immutable custom-pool initialization are simulated and encoded

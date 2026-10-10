@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "launchId": "57e259f6-affc-4561-809b-78f18c35cb41",
+  "chainId": 1,
+  "sourceCommit": "7219f0dcf5d2609b75de0912c32668a201e9f617",
+  "attestationHash": "195040436c9d1c3ccf14d596071363652de3bc9c6655ab248338f0efe4534e70",
+  "contracts": [
+    {
+      "name": "TitheToken",
+      "address": "0x31ca73d03093357df8ddaaa73dbe1970f4eead6c",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "abiPath": "abi/TitheToken.json"
+    },
+    {
+      "name": "TitheHook",
+      "address": "0x815de6ecfc1e0b24b7ae8a5dcc05ba8f5d8f20cc",
+      "abiHash": "48ae8b56141f97a67a9d18d84ead0177afac563c0818231c8620d2006b476753",
+      "abiPath": "abi/TitheHook.json"
+    }
+  ],
+  "network": {
+    "chainId": 1,
+    "name": "Ethereum",
+    "testnet": false,
+    "rpcUrls": [
+      "https://ethereum-rpc.publicnode.com",
+      "https://eth.drpc.org"
+    ],
+    "explorer": "https://etherscan.io",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "faucets": [],
+    "uniswapV4": {
+      "poolManager": "0x000000000004444c5dc75cb358380d2e3de08a90",
+      "universalRouter": "0x66a9893cc07d91d95644aedd05d03f95e1dba8af",
+      "quoter": "0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203",
+      "stateView": "0x7ffe42c4a5deea5b0fec41c94c136cf115597227",
+      "positionManager": "0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e",
+      "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    "pairToken": {
+      "address": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+      "symbol": "IMD",
+      "name": "Identity.md",
+      "decimals": 18
+    },
+    "otherPairTokens": [
+      {
+        "id": "fwa",
+        "address": "0xa0df17b5ac76ababa36e1450e2cbcd18a620c845",
+        "symbol": "FWA",
+        "name": "Fake World Assets",
+        "decimals": 18
+      }
+    ]
+  },
+  "walletAddChain": {
+    "chainId": "0x1",
+    "chainName": "Ethereum",
+    "rpcUrls": [
+      "https://ethereum-rpc.publicnode.com",
+      "https://eth.drpc.org"
+    ],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "blockExplorerUrls": [
+      "https://etherscan.io"
+    ]
+  },
+  "assets": [
+    {
+      "path": "THIRD-PARTY.txt",
+      "sha256": "e155480a4e448c67ea60e8832ffee2fdba69edacc1860d178128e298597b93ad"
+    },
+    {
+      "path": "abi/TitheHook.json",
+      "sha256": "646955f8d62efdb5aa1e0f67230a6868b88dcf5d9a431d29a334646e4cdf52d0"
+    },
+    {
+      "path": "abi/TitheToken.json",
+      "sha256": "9578fcb499b4ba5fac51462a67a2654d9f803e0ea3af9bdb19130ff695808542"
+    },
+    {
+      "path": "assets/ccip-Ba_foizM.js",
+      "sha256": "4cb016139020307ba6519c63947ba52625a70c999b7d039fea4aa395939d11ab"
+    },
+    {
+      "path": "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "path": "assets/index-DzKrnJEw.css",
+      "sha256": "9fa37e091bfa6ccfbf32f0b2b06d474946de53f0f2974e5dd9129efd0d45f2fc"
+    },
+    {
+      "path": "assets/index-wHA5xlcm.js",
+      "sha256": "4ae98b559128df9ec8cb78172ee6157f15dd3e3feac58d474f7e23943fa3ddce"
+    },
+    {
+      "path": "assets/instrument-serif-latin-400-italic-DKMiL14s.woff2",
+      "sha256": "5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7"
+    },
+    {
+      "path": "assets/instrument-serif-latin-400-normal-DnYpCC2O.woff2",
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31"
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "9283418be036dd2b37632d165937471628eb11a65b6d4afa1f24c634211ddaf3"
+    },
+    {
+      "path": "index.html",
+      "sha256": "337c70ae68284f6a676c50ab9ef75f69230da1c671845cf71675979cac78cc1c"
+    }
+  ]
+}

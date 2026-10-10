@@ -1,0 +1,59 @@
+{
+  "chainId": 1,
+  "repoUrl": "https://github.com/identity-md-launches/launch-1245-tithehook",
+  "version": 1,
+  "launchId": "57e259f6-affc-4561-809b-78f18c35cb41",
+  "manifest": {
+    "hook": {
+      "contract": "TitheHook",
+      "permissions": [
+        "beforeInitialize",
+        "beforeSwap",
+        "afterSwap",
+        "beforeSwapReturnDelta",
+        "afterSwapReturnDelta"
+      ],
+      "constructorArgs": [
+        "$poolManager",
+        "0x0000ec93127baa929e58e97dd0095a2bfb38ec1d",
+        "1",
+        "25"
+      ]
+    },
+    "kind": "univ4_hook",
+    "pool": {
+      "fee": 12500,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "TitheHook accrues an immutable input-currency tithe to an identity.md seat. Constructor arguments are the chain's PoolManager, the workflow-supplied canonical seat NFT, default seatId 1 (the approved fallback because no payer-confirmed seat was supplied), and default titheBps 25 (0.25%). TitheToken has no constructor arguments. Ordinary PoolManager.initialize invokes beforeInitialize and permanently binds these defaults to the pool. Custom pools may instead use initializePool with abi.encode(uint256 seatId, uint24 titheBps); configuration cannot change after initialization. Initialization is permissionless; the launch factory must deploy and initialize the demo pool atomically. Enabled callbacks accept only the PoolManager; the required hook address permission mask is 0x20cc. There are no owner, admin or upgrade functions. The native ETH/TDEMO pool retains its separate 1.25% LP fee. As required by the workflow's input-token accounting, ETH-input swaps accrue ETH and TDEMO-input swaps accrue TDEMO. afterSwap takes fees into the hook and credits actual receipts when the manager has sufficient funds; otherwise it mints ERC-6909 backing claims and records pending credit. titheOf and totalTithe include liquid and pending credits. Anyone may call redeemTithe or claim; claim redeems pending backing and pays the full credit to the seat NFT's ownerOf(seatId) resolved at claim time. A nonexistent seat or failed payout reverts the claim and preserves credit. Exact-input swaps charge floor(specified input budget * titheBps / 10000) in beforeSwap and collect that same fee in afterSwap, including on partial fills. Thus partial exact-input fills are charged on the full specified budget rather than only actual input spent; a zero-input fill reverts. Exact-output swaps charge floor(actual AMM input * titheBps / (10000 - titheBps)). The hook mints backing claims only to itself; it does not mint refund claims to routers. Routers that settle their reported currency deltas work without claim redemption. TitheRouter is an optional adjunct contract requiring separate deployment if used. The manifest initialPrice is the prescribed reference value; the deployment service derives the actual opening price from launch policy and the deployed token address. Mainnet deployment, canonical seat verification, source publication and signed artifact linkage remain subsequent service work.",
+    "token": {
+      "name": "Tithe Demo",
+      "symbol": "TDEMO",
+      "contract": "TitheToken",
+      "decimals": 18
+    }
+  },
+  "contracts": [
+    {
+      "name": "TitheToken",
+      "txHash": "0x7b2bdde1340e4c3f1621312a55f47a2deaf9e587ef9c7d0f0add1ddf97ce6a18",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "address": "0x31ca73d03093357df8ddaaa73dbe1970f4eead6c",
+      "blockNumber": 26163059,
+      "creationCodeHash": "f539838384a1790f640f50d3e920e0a5646ada1a8c29065ba1c8029dfabf2161"
+    },
+    {
+      "name": "TitheHook",
+      "txHash": "0x7b2bdde1340e4c3f1621312a55f47a2deaf9e587ef9c7d0f0add1ddf97ce6a18",
+      "abiHash": "48ae8b56141f97a67a9d18d84ead0177afac563c0818231c8620d2006b476753",
+      "address": "0x815de6ecfc1e0b24b7ae8a5dcc05ba8f5d8f20cc",
+      "blockNumber": 26163059,
+      "creationCodeHash": "416046fb04cacef9954bbb1d6da408dec27258bc93d1252dd38fca9377bd848b"
+    }
+  ],
+  "sourceCommit": "7219f0dcf5d2609b75de0912c32668a201e9f617",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "195040436c9d1c3ccf14d596071363652de3bc9c6655ab248338f0efe4534e70"
+}

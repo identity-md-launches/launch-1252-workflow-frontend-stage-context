@@ -1,0 +1,45 @@
+
+> tithe-frontend@1.0.0 test:live
+> node tests/browser-live.mjs
+
+{
+  "checkedAt": "2026-10-10T16:27:53.979Z",
+  "scope": "Real public RPC, disconnected browser, read-only; no wallet, no signing, no broadcast",
+  "result": "PASS",
+  "console": [],
+  "requests": "40 responses recorded",
+  "viewports": [
+    {
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false
+    }
+  ],
+  "blockText": "Live state · block 26,163,225",
+  "balances": [
+    "0.001237ETH",
+    "114,732.393978TDEMO"
+  ],
+  "owner": "Seat owner 0xBe11D80C27863C950485D269992DC086e9F397A9 on explorer",
+  "events": "Tithe accruedBlock 26,163,067114,732.393978 TDEMO Tithe accruedBlock 26,163,0620.001237 ETH Pool bound to seatBlock 26,163,059View ",
+  "fonts": [
+    {
+      "family": "DM Sans Variable",
+      "weight": "100 1000",
+      "status": "loaded"
+    },
+    {
+      "family": "Instrument Serif",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Instrument Serif",
+      "weight": "400",
+      "status": "loaded"
+    }
+  ]
+}

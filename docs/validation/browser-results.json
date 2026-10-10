@@ -1,0 +1,144 @@
+{
+  "time": "2026-10-10T16:23:39.878Z",
+  "scope": "Production export at a gateway-style subpath; deterministic mocked public RPC and EIP-1193 wallet; no broadcast",
+  "checks": [
+    {
+      "name": "axe at 1440px",
+      "result": "PASS",
+      "violations": []
+    },
+    {
+      "name": "axe at 960px",
+      "result": "PASS",
+      "violations": []
+    },
+    {
+      "name": "axe at 768px",
+      "result": "PASS",
+      "violations": []
+    },
+    {
+      "name": "axe at 390px",
+      "result": "PASS",
+      "violations": []
+    },
+    {
+      "name": "axe at 320px",
+      "result": "PASS",
+      "violations": []
+    },
+    {
+      "name": "Desktop/mobile rendering, keyboard, fonts, contrast, reflow and accessibility",
+      "result": "PASS"
+    },
+    {
+      "name": "Missing wallet gives recoverable feedback",
+      "result": "PASS"
+    },
+    {
+      "name": "Unknown-chain switch adds exact vetted chain and retries",
+      "result": "PASS"
+    },
+    {
+      "name": "Claim resolves current owner, sends no approval, locks pending, refreshes balances",
+      "result": "PASS"
+    },
+    {
+      "name": "Claim wallet rejection and simulation revert release controls without broadcasting",
+      "result": "PASS"
+    },
+    {
+      "name": "Seat lookup, nonexistent seat, large ID validation and empty balances",
+      "result": "PASS"
+    },
+    {
+      "name": "Native buy quotes via vetted quoter, encodes bounded router transaction and refreshes",
+      "result": "PASS"
+    },
+    {
+      "name": "Token sell has exact token→Permit2 and Permit2→router approvals, no ETH value",
+      "result": "PASS"
+    },
+    {
+      "name": "Quote validation, failed quote, stale quote, and account-change invalidation",
+      "result": "PASS"
+    },
+    {
+      "name": "Missing code and RPC failure disable all writes and can recover",
+      "result": "PASS"
+    },
+    {
+      "name": "ABI tampering fails closed before wallet or RPC actions",
+      "result": "PASS"
+    },
+    {
+      "name": "Advanced redemption sends to hook and preserves beneficiary",
+      "result": "PASS"
+    },
+    {
+      "name": "Keyboard-only connection and claim, visible focus, cancellation and recovery",
+      "result": "PASS"
+    },
+    {
+      "name": "Rejected wallet connection can be retried",
+      "result": "PASS"
+    },
+    {
+      "name": "A reverted receipt restores controls without claiming success",
+      "result": "PASS"
+    },
+    {
+      "name": "Unknown confirmation stays locked until the receipt can be checked",
+      "result": "PASS"
+    },
+    {
+      "name": "Token transfer and immutable custom-pool initialization are simulated and encoded",
+      "result": "PASS"
+    }
+  ],
+  "screenshots": [
+    "desktop.png",
+    "mobile-390.png",
+    "mobile-320.png"
+  ],
+  "consoleErrors": [],
+  "failedStaticResources": [],
+  "contrast": [
+    {
+      "selector": "h1",
+      "foreground": "rgb(36, 47, 38)",
+      "background": "rgb(250, 249, 245)",
+      "ratio": 13.2
+    },
+    {
+      "selector": ".hero-description",
+      "foreground": "rgb(98, 105, 94)",
+      "background": "rgb(250, 249, 245)",
+      "ratio": 5.39
+    },
+    {
+      "selector": ".swap-footnote",
+      "foreground": "rgb(98, 105, 94)",
+      "background": "rgb(255, 254, 250)",
+      "ratio": 5.62
+    },
+    {
+      "selector": ".primary",
+      "foreground": "rgb(255, 254, 250)",
+      "background": "rgb(36, 91, 64)",
+      "ratio": 7.87
+    },
+    {
+      "selector": ".balance-number",
+      "foreground": "rgb(36, 47, 38)",
+      "background": "rgb(255, 254, 250)",
+      "ratio": 13.78
+    },
+    {
+      "selector": ".small-label",
+      "foreground": "rgb(98, 105, 94)",
+      "background": "rgb(250, 249, 245)",
+      "ratio": 5.39
+    }
+  ]
+}

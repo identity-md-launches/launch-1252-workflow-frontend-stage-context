@@ -1,0 +1,41 @@
+{
+  "name": "tithe-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/export.mjs --dev && vite",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && vite build && node scripts/export.mjs && node scripts/verify.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "verify": "node scripts/verify.mjs",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:browser": "node --import tsx tests/browser.mjs",
+    "check:rpc": "node --import tsx scripts/check-rpc.ts",
+    "test:live": "node tests/browser-live.mjs",
+    "licenses": "node scripts/licenses.mjs",
+    "check:budget": "node scripts/check-budget.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "5.3.0",
+    "@fontsource/instrument-serif": "5.3.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "viem": "2.57.4"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.64.0",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

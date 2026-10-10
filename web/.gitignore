@@ -1,0 +1,10 @@
+# Explicit ignore-file budget: web/.gitignore only.
+# Dependencies and generated caches are excluded at every nesting level.
+**/node_modules/
+**/.cache/
+**/.npm/
+**/.vite/
+**/coverage/
+**/playwright-report/
+**/test-results/
+generated/

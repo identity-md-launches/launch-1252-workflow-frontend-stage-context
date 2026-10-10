@@ -1,0 +1,407 @@
+{
+  "checkedAt": "2026-10-10T16:24:24.081Z",
+  "scope": "Real public RPC, disconnected browser, read-only; no wallet, no signing, no broadcast",
+  "result": "FAIL",
+  "console": [
+    "Failed to load resource: the server responded with a status of 403 ()",
+    "Failed to load resource: the server responded with a status of 400 ()"
+  ],
+  "requests": [
+    {
+      "url": "/preview/",
+      "status": 200
+    },
+    {
+      "url": "/preview/assets/index-DzKrnJEw.css",
+      "status": 200
+    },
+    {
+      "url": "/preview/assets/index-wHA5xlcm.js",
+      "status": 200
+    },
+    {
+      "url": "/preview/assets/instrument-serif-latin-400-normal-DnYpCC2O.woff2",
+      "status": 200
+    },
+    {
+      "url": "/preview/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+      "status": 200
+    },
+    {
+      "url": "/preview/imd-deployment.json",
+      "status": 200
+    },
+    {
+      "url": "/preview/favicon.svg",
+      "status": 200
+    },
+    {
+      "url": "/preview/abi/TitheToken.json",
+      "status": 200
+    },
+    {
+      "url": "/preview/abi/TitheHook.json",
+      "status": 200
+    },
+    {
+      "url": "/preview/assets/instrument-serif-latin-400-italic-DKMiL14s.woff2",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 403
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://eth.drpc.org/",
+      "status": 400
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com/",
+      "status": 200
+    }
+  ],
+  "viewports": [],
+  "blockText": "Live state · block 26,163,208",
+  "balances": [
+    "0.001237ETH",
+    "114,732.393978TDEMO"
+  ],
+  "owner": "Seat owner 0xBe11D80C27863C950485D269992DC086e9F397A9 on explorer",
+  "error": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.activity-list')\u001b[22m\n"
+}
